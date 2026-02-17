@@ -10,9 +10,12 @@ body {
     background-color:white;
     display:flex;
 }
-.option {
+.option,#selected {
     width:75px;
     height:35px;
-    background-color:red;
+    background-color:transparent;
     border:transparent;
+}
+#selected {
+    background-color:blue
 }
