@@ -12,6 +12,6 @@ body {
 .option {
     width:100px;
     height:35px;
-    background-color:transparent;
+    background-color:red;
     border:transparent;
 }
