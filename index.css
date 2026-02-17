@@ -11,7 +11,7 @@ body {
     display:flex;
 }
 .option {
-    width:50%;
+    width:75px;
     height:35px;
     background-color:red;
     border:transparent;
