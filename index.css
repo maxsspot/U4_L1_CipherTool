@@ -5,17 +5,25 @@ body {
 }
 
 #selectionArea {
-    width:150px;
+    width:fit-content;
     border-radius:10px;
     background-color:white;
     display:flex;
 }
+.option{
+    z-index:1;
+}
 .option,#selected {
     width:75px;
     height:35px;
+    padding:5px;
     background-color:transparent;
     border:transparent;
 }
 #selected {
-    background-color:blue
+    background-color:skyblue;
+    border-radius:10px;
+    position:fixed;
+    padding:0px;
+    z-index:1;
 }
