@@ -8,19 +8,30 @@ body {
     background-color:#F5F5F0;
 }
 
+#key {
+    
+}
+
 button {
     cursor:pointer;
 }
 
-#learnMore {
-    float:left;
+.underline {
+    width:5px;
+    height:1px;
+    background-color:black;
+    position:fixed;
+    top:40px;
+}
+
+.learnControls {
+    position:fixed;
+    left:0px;
+    top:10px;
     width:125px;
     height:30px;
     background-color:transparent;
     border:transparent solid 1px;
-}
-#learnMore:hover {
-    border-bottom:black solid 1px
 }
 
 .infoArea {
@@ -35,6 +46,9 @@ button {
     background-color:#F5F5F0;
     top:0px;
     z-index:1;
+    transition:all 0.5s;
+    opacity:0;
+    pointer-events:none;
 }
 
 #mainContent {
@@ -44,7 +58,7 @@ button {
     transform:translate(-50%,-65%);
 }
 
-#selectionArea {
+#selectionArea, #keyArea {
     width:fit-content;
     border-radius:10px;
     background-color:white;
