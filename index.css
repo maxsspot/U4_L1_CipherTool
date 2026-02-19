@@ -8,8 +8,27 @@ body {
     background-color:#F5F5F0;
 }
 
+a {
+    position:fixed;
+    left:5px;
+    bottom:5px;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+
+#upperArea {
+    display:flex;
+}
+
 #key {
-    
+    width:30px;
+    height:30px;
+    background-color:white;
+    border-radius:10px;
+    border:transparent;
+    text-align:center;
 }
 
 button {
@@ -65,6 +84,7 @@ button {
     display:flex;
     margin:auto;
 }
+
 #encrypt {
     font-weight:bold;
 }

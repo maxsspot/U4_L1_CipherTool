@@ -1,3 +1,4 @@
+<!-- Max Snyder, Unit 4 Lab 1-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,25 +12,27 @@
         <div id="explanation">
             <button class="learnControls" id="goBack"><i class="fa-solid fa-arrow-left fa-lg"></i> Go Back</button>
             <h1>What Is It?</h1>
-            <p class="infoArea">A Ceaser Cipher is a type of cipher where you have a key, which is an integer, and then shift the letter up by whatever your key is. For example, assume we have a key of 1. Applying this key, a becomes b, b becomes c, c becomes d, and so on.</p>
+            <p class="infoArea">A Caeser Cipher is a type of cipher where you have a key, which is an integer, and then shift the letter up by whatever your key is. For example, assume we have a key of 1. Applying this key, a becomes b, b becomes c, c becomes d, and so on.</p>
             <h1>How To Use?</h1>
-            <p class="infoArea">1) Choose to either encrypt or decrypt by clicking your desired option<br>2) Type your text in the box under the area where you selected your option<br>3) Click the button under the input area<br>4) Congrats! You now have encrypted (or decrypted) text!</p>
+            <p class="infoArea">1) Choose to either encrypt or decrypt by clicking your desired option<br>2) Type your keyshift into the box next to the encrypt or derypt options. <br>3) Type your text in the box under the area where you selected your option<br>4) Click the button under the input area<br>5) Congrats! You now have encrypted (or decrypted) text!</p>
         </div>
         <div id="mainContent">
-            <h1>Ceaser Cipher</h1>
-            <div id="selectionArea">
-                <button class="option" id="encrypt">ENCRYPT</button>
-                <button class="option" id="decrypt">DECRYPT</button>
+            <h1>Caeser Cipher</h1>
+            <div id = "upperArea">
+                <div id="selectionArea">
+                    <button class="option" id="encrypt">ENCRYPT</button>
+                    <button class="option" id="decrypt">DECRYPT</button>
+                </div>
+                <div id="keyArea">
+                    <input id="key" value="1"/>
+                </div>
             </div>
-            <!--<div id="keyArea">
-                <p>KEY</p>
-                <input id="key"/>
-            </div>-->
             <br>
             <textarea id="text" placeholder = "Type your regular text here..."></textarea>
             <br><br>
             <button id = "fixText">Encrypt Text</button>
         </div>
+        <a href="./pages/SDP/U5_Lab1_SDP.html">SDP</a>
         <script src="index.js"></script>
     </body>
 </html>

@@ -56,24 +56,25 @@ function closeLearn(learnArea) {
 function fixText() {
     const alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     let text=document.getElementById("text");
-    let original=text.value
+    let original=text.value.toLowerCase()
+    let shift=Number(document.getElementById("key").value);
 
     if(mode=="encrypt"){
-        encrypt(original, alphabet)
+        encrypt(original, alphabet, shift)
     } else{
-        decrypt(original, alphabet)
+        decrypt(original, alphabet, shift)
     }
 }
 
 // Encrypts the text
-function encrypt(original,alphabet){
+function encrypt(original,alphabet,shift){
     let encrypted=""
     for (i in original) {
         if(alphabet.includes(original[i])) {
-            if((alphabet.indexOf(original[i])+1) < alphabet.length) {
-                encrypted=encrypted+alphabet[(alphabet.indexOf(original[i]))+1]
+            if((alphabet.indexOf(original[i])+shift) < alphabet.length) {
+                encrypted=encrypted+alphabet[(alphabet.indexOf(original[i]))+shift]
             }else{
-                encrypted=encrypted+alphabet[1]
+                encrypted=encrypted+alphabet[shift-1]
             }
         }else{
             encrypted=encrypted+original[i]
@@ -84,11 +85,11 @@ function encrypt(original,alphabet){
 }
 
 // Decrypts the text
-function decrypt(original,alphabet){
+function decrypt(original,alphabet,shift){
     let decrypted=""
     for (i in original) {
         if(alphabet.includes(original[i])) {
-            decrypted=decrypted+alphabet[(alphabet.indexOf(original[i]))-1]
+            decrypted=decrypted+alphabet[(alphabet.indexOf(original[i]))-shift]
         }else{
             decrypted=decrypted+original[i]
         }
